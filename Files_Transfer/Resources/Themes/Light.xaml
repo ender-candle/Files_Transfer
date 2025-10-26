@@ -1,0 +1,93 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+     <!-- 主色 -->
+    <SolidColorBrush x:Key="TextBrush" Color="#000000"></SolidColorBrush>
+    <SolidColorBrush x:Key="SecondTextBrush" Color="#444444"></SolidColorBrush>
+    <SolidColorBrush x:Key="ThirdTextBrush" Color="#8F8F8F"></SolidColorBrush>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#F5F5F5"></SolidColorBrush>
+    <!-- 窗体按钮 -->
+    <SolidColorBrush x:Key="WindowButtonForegroundBrush" Color="#AAAAAA"></SolidColorBrush>
+    <SolidColorBrush x:Key="WindowButtonForegroundBrushActive" Color="#222222"></SolidColorBrush>
+    <SolidColorBrush x:Key="WindowButtonBackgroundBrushActive1" Color="#DDDDDD"></SolidColorBrush>
+    <SolidColorBrush x:Key="WindowButtonBackgroundBrushActive2" Color="#FD0007"></SolidColorBrush>
+    <!-- 侧边栏及其按钮 -->
+    <SolidColorBrush x:Key="SidebarBrush" Color="#EEEEEE"></SolidColorBrush>
+    <RadialGradientBrush x:Key="SideBarButtonBackgroundBrushActive">
+        <GradientStop Color="#00B86A" Offset="0"></GradientStop>
+        <GradientStop Color="#00B86A" Offset="0.5"></GradientStop>
+        <GradientStop Color="#EEEEEE" Offset="1"></GradientStop>
+    </RadialGradientBrush>
+    <!-- 分割线 -->
+    <SolidColorBrush x:Key="LineColorBrush" Color="#D4D4D4"></SolidColorBrush>
+    <!-- 服务端、客户端选择按钮 -->
+    <SolidColorBrush x:Key="NetworkRadioButtonBorderBrush" Color="#00B86A"></SolidColorBrush>
+    <SolidColorBrush x:Key="NetworkRadioButtonForegroundBrush" Color="#FFFFFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="NetworkRadioButtonBackgroundBrush" Color="#EEEEEE"></SolidColorBrush>
+    <SolidColorBrush x:Key="NetworkRadioButtonStateBrush1" Color="#FF0000"></SolidColorBrush>
+    <SolidColorBrush x:Key="NetworkRadioButtonStateBrush2" Color="#00FF00"></SolidColorBrush>
+    <RadialGradientBrush x:Key="NetworkRadioButtonStateBackgroundBrush1">
+        <GradientStop Color="#00FF5500" Offset="0"></GradientStop>
+        <GradientStop Color="#00FF5500" Offset="0.7"></GradientStop>
+        <GradientStop Color="#0000B86A" Offset="1"></GradientStop>
+    </RadialGradientBrush>
+    <RadialGradientBrush x:Key="NetworkRadioButtonStateBackgroundBrush2">
+        <GradientStop Color="#0055FF00" Offset="0"></GradientStop>
+        <GradientStop Color="#0055FF00" Offset="0.7"></GradientStop>
+        <GradientStop Color="#0000B86A" Offset="1"></GradientStop>
+    </RadialGradientBrush>
+    <!-- 确定、取消按钮 -->
+    <SolidColorBrush x:Key="CcButtonIconBrush" Color="#FFFFFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="CcButtonBackgroundBrush" Color="#EEEEEE"></SolidColorBrush>
+    <SolidColorBrush x:Key="ConfirmButtonForegroundBrush" Color="#00B86A"></SolidColorBrush>
+    <SolidColorBrush x:Key="CancelButtonForegroundBrush" Color="#FF0000"></SolidColorBrush>
+    <SolidColorBrush x:Key="ConfirmButtonUnableBackgroundBrush" Color="#00D67B"></SolidColorBrush>
+    <SolidColorBrush x:Key="CancelButtonUnableBackgroundBrush" Color="#FF6666"></SolidColorBrush>
+    <!-- 连接状态、提示 文字、图标 -->
+    <SolidColorBrush x:Key="ConnectStateBrush1" Color="#00FF00"></SolidColorBrush>
+    <SolidColorBrush x:Key="ConnectStateBrush2" Color="#FF0000"></SolidColorBrush>
+    <!-- 输入框 -->
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#BBBBBB"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxBorderBrushFocused" Color="#AA0000FF"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxCaretBrush" Color="#111111"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxHintTextBrush" Color="#AAAAAA"></SolidColorBrush>
+    <!-- 任务条控件 -->
+    <SolidColorBrush x:Key="OutBorderBrush" Color="#D0D0D0"></SolidColorBrush>
+    <SolidColorBrush x:Key="OutBorderActiveBrush" Color="#5B5BFA"></SolidColorBrush>
+    <SolidColorBrush x:Key="InBorderBrush" Color="#DFDFDF"></SolidColorBrush>
+    <SolidColorBrush x:Key="InBorderActiveBrush" Color="#5B5BFA"></SolidColorBrush>
+    <SolidColorBrush x:Key="RemindTextBrush1" Color="#FF0000"></SolidColorBrush>
+    <SolidColorBrush x:Key="RemindTextBrush2" Color="#00FF00"></SolidColorBrush>
+    <SolidColorBrush x:Key="RemindTextBrush3" Color="#5B5BFA"></SolidColorBrush>
+    <SolidColorBrush x:Key="ProgressBarForegroundBrush" Color="#13C2C2"></SolidColorBrush>
+    <SolidColorBrush x:Key="ProgressBarBackgroundBrush" Color="#EBEEF5"></SolidColorBrush>
+    <SolidColorBrush x:Key="FileChooseButtonBrush" Color="#00B86A"></SolidColorBrush>
+    <SolidColorBrush x:Key="AcceptButtonBrush" Color="#4B4DFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="RejectButtonBrush" Color="#FF0000"></SolidColorBrush>
+    <SolidColorBrush x:Key="SmallButtonBrushActive" Color="#5B5BFA"></SolidColorBrush>
+    <!-- 发送文件页面文字、按钮 -->
+    <SolidColorBrush x:Key="DropFileBorderBrush" Color="#D4D4D4"></SolidColorBrush>
+    <SolidColorBrush x:Key="DropFileTextBrush" Color="#CACACA"></SolidColorBrush>
+    <SolidColorBrush x:Key="DropFileButtonBrush" Color="#4B4DFF"></SolidColorBrush>
+    <!-- 消息窗口 -->
+    <SolidColorBrush x:Key="MessageWindowBackgroundBrush" Color="#BBDDDDDD"></SolidColorBrush>
+    <SolidColorBrush x:Key="MessageWindowForegroundBrush" Color="#444444"></SolidColorBrush>
+    <SolidColorBrush x:Key="MessageWindowButtonBrush" Color="#FF7700"></SolidColorBrush>
+    <!-- 确认窗口 -->
+    <SolidColorBrush x:Key="ConfirmWindowBackgroundBrush" Color="#BBDDDDDD"></SolidColorBrush>
+    <SolidColorBrush x:Key="ConfirmWindowButtonBrush1" Color="#4B4DFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="ConfirmWindowButtonBrush2" Color="#FF7700"></SolidColorBrush>
+    <!-- 信息窗口 -->
+    <SolidColorBrush x:Key="InfoWindowBackgroundBrush" Color="#DDDADADA"></SolidColorBrush>
+    <SolidColorBrush x:Key="InfoWindowTextBrush" Color="#A2A2A2"></SolidColorBrush>
+    <!-- 设置 -->
+    <SolidColorBrush x:Key="ThemeRadioButtonBorderBrush" Color="#AAAAAA"></SolidColorBrush>
+    <SolidColorBrush x:Key="ThemeRadioButtonBorderBrushChosen" Color="#5B5BFA"></SolidColorBrush>
+    <SolidColorBrush x:Key="ToggleButtonForegroundBrush" Color="#FFFFFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundBrush" Color="#C3C6CC"></SolidColorBrush>
+    <SolidColorBrush x:Key="ToggleButtonBackgroundBrushChosen" Color="#5B5BFA"></SolidColorBrush>
+    <SolidColorBrush x:Key="DirectoryChooseButtonBrush" Color="#4B4BFF"></SolidColorBrush>
+    <!-- 速度表控件 -->
+    <SolidColorBrush x:Key="SpeedIndicatorIconBrush" Color="#9B9B9B"></SolidColorBrush>
+    <SolidColorBrush x:Key="SpeedIndicatorBorderBrush" Color="#C0C0C0"></SolidColorBrush>
+    <SolidColorBrush x:Key="SpeedIndicatorActiveBrush" Color="#5B5BFA"></SolidColorBrush>
+</ResourceDictionary>

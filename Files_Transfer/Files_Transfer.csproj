@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RootNamespace>Files_Transfer</RootNamespace>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Fonts\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Assets\SVG\NetworkRadioButtonIcon.ttf" />
+      <Resource Include="Assets\SVG\SideBarButtonIcon.ttf" />
+      <Resource Include="Assets\SVG\NetworkListenIcon.ttf" />
+      <Resource Include="Assets\SVG\CcButtonIcon.ttf" />
+      <Resource Include="Assets\SVG\TaskIcon.ttf" />
+      <Resource Include="Assets\SVG\SendIcon.ttf" />
+      <Resource Include="Assets\PNG\LightTheme.png" />
+      <Resource Include="Assets\PNG\DarkTheme.png" />
+      <Resource Include="Assets\PNG\icon.png" />
+      <Resource Include="Assets\SVG\DirectoryIcon.ttf" />
+      <Resource Include="Assets\SVG\SpeedIndicator.ttf" />
+      <Resource Include="Assets\PNG\startup.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="App.config">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

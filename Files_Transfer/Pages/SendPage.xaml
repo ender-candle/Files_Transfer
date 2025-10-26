@@ -1,0 +1,88 @@
+﻿<Page x:Class="Files_Transfer.Pages.SendPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Files_Transfer.Pages"
+      mc:Ignorable="d"
+      Title="SendPage" Style="{StaticResource SendPage}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="发送文件" FontSize="25" FontWeight="Black" Foreground="{DynamicResource SecondTextBrush}"
+                          VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left"
+                          Margin="40 0 0 0"></Label>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 40 0">
+                <Label FontFamily="{StaticResource NetworkListenIcon}" Content="&#xe6a0;" FontSize="20" Width="30" Visibility="Collapsed" Name="SuccessLabel"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{DynamicResource ConnectStateBrush1}"></Label>
+                <Label FontFamily="{StaticResource NetworkListenIcon}" Content="&#xe663;" FontSize="20" Width="30" Visibility="Collapsed" Name="FailLabel"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{DynamicResource ConnectStateBrush2}"></Label>
+                <Label FontFamily="{StaticResource SendIcon}" Content="&#xe8bd;" FontSize="20" Width="30" Visibility="Collapsed" Name="SendingLabel"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{DynamicResource SecondTextBrush}"></Label>
+                <Label FontSize="15" Width="80" Name="InfoLabel"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{DynamicResource SecondTextBrush}"></Label>
+            </StackPanel>
+        </Grid>
+        <Border Grid.Row="1" Height="2" Background="{DynamicResource LineColorBrush}" Margin="40 0"></Border>
+        <Border Grid.Row="2" Margin="40 20" BorderThickness="1" BorderBrush="{DynamicResource DropFileBorderBrush}"
+                CornerRadius="5" Background="Transparent" Drop="DropFile" AllowDrop="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="将文件拖入此处或点击按钮" Foreground="{DynamicResource DropFileTextBrush}"
+                       FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                <Button Grid.Row="1" FontFamily="{StaticResource SendIcon}" Content="  &#xe628; " Style="{StaticResource SimpleButton}"
+                        BorderBrush="{DynamicResource DropFileButtonBrush}" Foreground="{DynamicResource DropFileButtonBrush}"
+                        Width="140" Height="45" Opacity="0.5" FontSize="25" VerticalAlignment="Center" Click="ChooseFile"></Button>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="文件路径：" Foreground="{DynamicResource SecondTextBrush}" HorizontalContentAlignment="Center"
+                   FontSize="18" Margin="40 10 0 10" Width="100"></Label>
+            <Grid Grid.Column="1" Margin="0 10 40 10">
+                <Border Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                        BorderThickness="1" CornerRadius="5" MouseEnter="PathTextBox_OnMouseEnter" MouseLeave="PathTextBox_OnMouseLeave">
+                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                             VerticalContentAlignment="Center" FontSize="16" Name="PathTextBox"
+                             GotFocus="PathTextBox_OnGotFocus" LostFocus="PathTextBox_OnLostFocus"
+                             VerticalAlignment="Center" TextChanged="Fresh"></TextBox>
+                </Border>
+                <Border Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                        BorderThickness="1" CornerRadius="5" Name="PathBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                <Border Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                        BorderThickness="1" CornerRadius="5" Name="PathBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="文件大小：" Foreground="{DynamicResource SecondTextBrush}" HorizontalContentAlignment="Center"
+                   FontSize="18" Margin="40 10 0 10" Width="100"></Label>
+            <Label Grid.Column="1" FontSize="16" VerticalContentAlignment="Center" Foreground="{DynamicResource SecondTextBrush}"
+                   Margin="0 0 40 0" Name="FileSizeLabel"></Label>
+        </Grid>
+        <Grid Grid.Row="5">
+           <Button Style="{StaticResource SendButton}" HorizontalAlignment="Right" Margin="0 0 40 30" Click="Send" Name="SendButton"></Button>
+        </Grid>
+    </Grid>
+</Page>

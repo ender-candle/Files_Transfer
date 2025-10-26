@@ -1,0 +1,327 @@
+﻿<Page x:Class="Files_Transfer.Pages.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Files_Transfer.Pages"
+      mc:Ignorable="d"
+      Title="SettingPage" Style="{StaticResource SettingPage}" Unloaded="SettingPage_OnUnloaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="设置" FontSize="25" FontWeight="Black" Foreground="{DynamicResource SecondTextBrush}"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left"
+                   Margin="40 0 0 0"></Label>
+            <Border Grid.Row="1" Height="2" Background="{DynamicResource LineColorBrush}" Margin="40 0"></Border>
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="0" Margin="40 30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="主题:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <RadioButton Style="{StaticResource LightThemeRadioButton}" Margin="10 0 15 0"
+                                     Name="LightRadioButton" Checked="LightRadioButton_OnChecked"></RadioButton>
+                        <RadioButton Style="{StaticResource DarkThemeRadioButton}" Name="DarkRadioButton" Checked="DarkRadioButton_OnChecked"></RadioButton>
+                    </StackPanel>
+                </Grid>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="1" Margin="40 10 40 25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="展示加载画面:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <ToggleButton Grid.Column="1" Style="{StaticResource ClassicToggleButton}" HorizontalAlignment="Left" Margin="10 0"
+                                  Name="StartUpToggleButton" Checked="StartUpToggleButton_OnChecked" Unchecked="StartUpToggleButton_OnUnchecked"></ToggleButton>
+                </Grid>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="2" Margin="40 30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="默认设置:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <DockPanel Grid.Column="0" Margin="5 0 0 0">
+                                <Label Content="下载路径" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                                <Grid>
+                                    <Border Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                            BorderThickness="1" CornerRadius="5" MouseEnter="DefaultPathTextBox_OnMouseEnter" MouseLeave="DefaultPathTextBox_OnMouseLeave">
+                                        <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                                 BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                                 VerticalContentAlignment="Center" FontSize="13" Name="DefaultPath"
+                                                 GotFocus="DefaultPathTextBox_OnGotFocus" LostFocus="DefaultPathTextBox_OnLostFocus"
+                                                 VerticalAlignment="Center"></TextBox>
+                                    </Border>
+                                    <Border Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                            BorderThickness="1" CornerRadius="5" Name="DefaultPathBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                    <Border Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                            BorderThickness="1" CornerRadius="5" Name="DefaultPathBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                                </Grid>
+                            </DockPanel>
+                            <Button Grid.Column="1" Style="{StaticResource SimpleButton}" FontFamily="{StaticResource DirectoryIcon}"
+                                    Content="&#xec17;" FontSize="14" Width="40" Foreground="{DynamicResource DirectoryChooseButtonBrush}"
+                                    BorderBrush="{DynamicResource DirectoryChooseButtonBrush}" Margin="0 0 40 0" Click="ChooseDirectory"></Button>
+                        </Grid>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="5 10 0 0">
+                            <Label Content="自动接收:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <ToggleButton Style="{StaticResource ClassicToggleButton}" HorizontalAlignment="Left" Margin="10 0"
+                                          Name="AutoReceiveToggleButton" Checked="AutoReceiveToggleButton_OnChecked" Unchecked="AutoReceiveToggleButton_OnUnchecked"></ToggleButton>
+                        </StackPanel>
+                        <DockPanel Grid.Row="2" Margin="5 20 0 0">
+                            <Label Content="服务端:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Label Content="IP" FontSize="15" Foreground="{DynamicResource SecondTextBrush}" Width="40"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="ServerIpTextBox_OnMouseEnter" MouseLeave="ServerIpTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                             VerticalContentAlignment="Center" FontSize="13" Name="ServerIp"
+                                             GotFocus="ServerIpTextBox_OnGotFocus" LostFocus="ServerIpTextBox_OnLostFocus"
+                                             VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ServerIpBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ServerIpBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="3" Margin="63.5 10 0 0">
+                            <Label Content="端口" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="ServerPortTextBox_OnMouseEnter" MouseLeave="ServerPortTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                                     BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                                     VerticalContentAlignment="Center" FontSize="13" Name="ServerPort"
+                                                     GotFocus="ServerPortTextBox_OnGotFocus" LostFocus="ServerPortTextBox_OnLostFocus"
+                                                     VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ServerPortBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ServerPortBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="4" Margin="5 10 0 0">
+                            <Label Content="客户端:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Label Content="IP" FontSize="15" Foreground="{DynamicResource SecondTextBrush}" Width="40"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="ClientIpTextBox_OnMouseEnter" MouseLeave="ClientIpTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                             VerticalContentAlignment="Center" FontSize="13" Name="ClientIp"
+                                             GotFocus="ClientIpTextBox_OnGotFocus" LostFocus="ClientIpTextBox_OnLostFocus"
+                                             VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ClientIpBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ClientIpBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="5" Margin="63.5 10 0 0">
+                            <Label Content="端口" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="ClientPortTextBox_OnMouseEnter" MouseLeave="ClientPortTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                             VerticalContentAlignment="Center" FontSize="13" Name="ClientPort"
+                                             GotFocus="ClientPortTextBox_OnGotFocus" LostFocus="ClientPortTextBox_OnLostFocus"
+                                             VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ClientPortBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="ClientPortBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                            </Grid>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="3" Margin="40 30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="传输速度限制:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0" Margin="5 0 0 0">
+                            <Label Content="上传" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="UpSpeedLimitTextBox_OnMouseEnter" MouseLeave="UpSpeedLimitTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                             VerticalContentAlignment="Center" FontSize="13" Name="UpSpeedLimit"
+                                             GotFocus="UpSpeedLimitTextBox_OnGotFocus" LostFocus="UpSpeedLimitTextBox_OnLostFocus"
+                                             VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="UpSpeedLimitBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="UpSpeedLimitBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <Label Content="KB/s" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                                    <ToggleButton Style="{StaticResource ClassicToggleButton}" HorizontalAlignment="Left" Margin="10 0"
+                                                  Name="UpSpeedLimitToggleButton" Checked="UpSpeedLimitToggleButton_OnChecked" Unchecked="UpSpeedLimitToggleButton_OnUnchecked"></ToggleButton>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1" Margin="5 10 0 0">
+                            <Label Content="下载" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="DownSpeedLimitTextBox_OnMouseEnter" MouseLeave="DownSpeedLimitTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                                     BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                                     VerticalContentAlignment="Center" FontSize="13" Name="DownSpeedLimit"
+                                                     GotFocus="DownSpeedLimitTextBox_OnGotFocus" LostFocus="DownSpeedLimitTextBox_OnLostFocus"
+                                                     VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="DownSpeedLimitBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="DownSpeedLimitBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <Label Content="KB/s" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                                    <ToggleButton Style="{StaticResource ClassicToggleButton}" HorizontalAlignment="Left" Margin="10 0"
+                                                  Name="DownSpeedLimitToggleButton" Checked="DownSpeedLimitToggleButton_OnChecked" Unchecked="DownSpeedLimitToggleButton_OnUnchecked"></ToggleButton>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="4" Margin="40 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="文件完整性校验:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <ToggleButton Grid.Column="1" Style="{StaticResource ClassicToggleButton}" HorizontalAlignment="Left" Margin="10 0"
+                                  Name="FileCompletenessCheckToggleButton" Checked="FileCompletenessCheckToggleButton_OnChecked" Unchecked="FileCompletenessCheckToggleButton_OnUnchecked"></ToggleButton>
+                </Grid>
+                <!-- =============================================================================================== -->
+                <Grid Grid.Row="5" Margin="40 20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.75*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="刷新时间间隔:" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right"></Label>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <DockPanel Grid.Row="0" Margin="10 0 0 0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource TextBoxBorderBrush}"
+                                        BorderThickness="1" CornerRadius="5" MouseEnter="FreshTimeTextBox_OnMouseEnter" MouseLeave="FreshTimeTextBox_OnMouseLeave">
+                                    <TextBox Foreground="{DynamicResource SecondTextBrush}" Background="Transparent"
+                                             BorderThickness="0" CaretBrush="{DynamicResource TextBoxCaretBrush}"
+                                             VerticalContentAlignment="Center" FontSize="13" Name="FreshTime"
+                                             GotFocus="FreshTimeTextBox_OnGotFocus" LostFocus="FreshTimeTextBox_OnLostFocus"
+                                             VerticalAlignment="Center"></TextBox>
+                                </Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="FreshTimeBorder1" IsHitTestVisible="False" Opacity="0"></Border>
+                                <Border Grid.Column="0" Background="Transparent" BorderBrush="{DynamicResource TextBoxBorderBrushFocused}"
+                                        BorderThickness="1" CornerRadius="5" Name="FreshTimeBorder2" IsHitTestVisible="False" Opacity="0"></Border>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <Label Content="ms" FontSize="15" Foreground="{DynamicResource SecondTextBrush}"
+                                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,11 @@
+﻿<Page x:Class="Files_Transfer.Pages.NetworkDefaultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Files_Transfer.Pages"
+      mc:Ignorable="d"
+      Title="NetworkDefaultPage">
+    <Label Content="请选择连接方..." FontSize="20" Foreground="{DynamicResource ThirdTextBrush}"
+           HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+</Page>

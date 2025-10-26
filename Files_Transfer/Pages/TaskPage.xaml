@@ -1,0 +1,42 @@
+﻿<Page x:Class="Files_Transfer.Pages.TaskPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Files_Transfer.UserControls"
+      mc:Ignorable="d"
+      Title="TaskPage" Style="{StaticResource TaskPage}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="任务列表" FontSize="25" FontWeight="Black" Foreground="{DynamicResource SecondTextBrush}"
+                       VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left"
+                       Margin="40 0 0 0"></Label>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 40 0">
+                    <Button FontFamily="{StaticResource TaskIcon}" Content="&#xe62a;" FontSize="18"
+                            Width="40" Style="{StaticResource TaskBarButton}" Click="RemoveAll"></Button>
+                    <Button FontFamily="{StaticResource TaskIcon}" Content="&#xe654;" FontSize="17.5"
+                            Width="40" Style="{StaticResource TaskBarButton}" Click="ResumeAll"></Button>
+                    <Button FontFamily="{StaticResource TaskIcon}" Content="&#xea6d;" FontSize="16"
+                            Width="40" Style="{StaticResource TaskBarButton}" Click="PauseAll"></Button>
+                </StackPanel>
+            </Grid>
+            <Border Grid.Row="1" Height="2" Background="{DynamicResource LineColorBrush}" Margin="40 0"></Border>
+        </Grid>
+        <ScrollViewer Grid.Row="1" Margin="40 20 25 0">
+            <StackPanel Name="TaskStackPanel"></StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="Icon">
+        /Files_Transfer;Component/Assets/SVG/SideBarButtonIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="NetworkRadioButtonIcon">
+        /Files_Transfer;Component/Assets/SVG/NetworkRadioButtonIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="CcButtonIcon">
+        /Files_Transfer;Component/Assets/SVG/CcButtonIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="NetworkListenIcon">
+        /Files_Transfer;Component/Assets/SVG/NetworkListenIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="TaskIcon">
+        /Files_Transfer;Component/Assets/SVG/TaskIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="SendIcon">
+        /Files_Transfer;Component/Assets/SVG/SendIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="DirectoryIcon">
+        /Files_Transfer;Component/Assets/SVG/DirectoryIcon.ttf#iconfont
+    </FontFamily>
+    <FontFamily x:Key="SpeedIcon">
+        /Files_Transfer;Component/Assets/SVG/SpeedIndicator.ttf#iconfont
+    </FontFamily>
+</ResourceDictionary>

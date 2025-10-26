@@ -36,6 +36,19 @@
       <None Update="App.config">
         <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </None>
+      <None Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Remove="obj\**" />
     </ItemGroup>
 
 </Project>

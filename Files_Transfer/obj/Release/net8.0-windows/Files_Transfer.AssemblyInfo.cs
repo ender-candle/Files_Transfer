@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Files_Transfer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d05441508398d0393702a9bbe08685520731b552")]
 [assembly: System.Reflection.AssemblyProductAttribute("Files_Transfer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Files_Transfer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

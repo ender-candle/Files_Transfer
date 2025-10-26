@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programs\\Rider\\Projects\\Files Transfer\\Files_Transfer\\Files_Transfer.csproj",
+      "projectUniqueName": "D:\\Programs\\Rider\\Projects\\Files_Transfer\\Files_Transfer\\Files_Transfer.csproj",
       "projectName": "Files_Transfer",
-      "projectPath": "D:\\Programs\\Rider\\Projects\\Files Transfer\\Files_Transfer\\Files_Transfer.csproj",
+      "projectPath": "D:\\Programs\\Rider\\Projects\\Files_Transfer\\Files_Transfer\\Files_Transfer.csproj",
       "packagesPath": "C:\\Users\\endc\\.nuget\\packages\\",
-      "outputPath": "D:\\Programs\\Rider\\Projects\\Files Transfer\\Files_Transfer\\obj\\",
+      "outputPath": "D:\\Programs\\Rider\\Projects\\Files_Transfer\\Files_Transfer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\endc\\AppData\\Roaming\\NuGet\\NuGet.Config"
